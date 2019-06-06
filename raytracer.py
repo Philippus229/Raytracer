@@ -121,13 +121,13 @@ class Scene:
 
 def test_scene():
     return Scene([Camera((-3, 1, 2), (-22.5, 45, 0), (90, 45))],
-                  [Plane((0, -1, 0), (10, 0, 10), (0, 0, 0), (255, 255, 255)),
+                  [Plane((0, -1, 0), (10, 0, 10), (64, 64, 64), (255, 255, 255)),
                    Box((-1, -0.5, 4), (1, 1, 1), (127, 255, 127)),
                    Sphere((1, -0.5, 4), 0.5, (255, 127, 0), 0)],
-                  [Light((5, 5, 3), 1, 20)],
+                  [Light((5, 5, 3), 1, 15), Light((5, 10, 7), 1, 20)],
                   (0, 127, 255))
 
-size = (512, 256)
+size = (256, 128)
 pygame.init()
 surface = pygame.display.set_mode(size)
 pygame.display.set_caption("Raytracing Test")
